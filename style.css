@@ -1,0 +1,175 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em;
+}
+
+@font-face {
+    font-family: 'cordel';
+    src: url('fontes/Cordel\ Encarnado.otf') format('truetype');
+} 
+
+html, body {
+    background-color: darkgrey;
+    min-height: 100%;
+    font-family: 'cordel';
+}
+
+/*-------------------------CABEÇALHO-----------------------*/
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+
+}
+
+header > h1 {
+    /*FONT-SIZE: 10Vw*/
+
+    /*
+    
+    Impostante salientar, inicialmente, que não é a melhor maneira de adaptarmos o tamanho das letras aos variados dispositivos, mas o comando font-size: 10vw funciona.
+    Ao aumentar e diminuir uma tela, as letras vão se adaptando ao tamanho solicitado como uma forma de criar um ambiente mais confortável de leitura para o usuário.
+    
+    */
+    
+    font-size: 5vw;
+    padding-top: 50px;
+    
+    /*FONT-VARIANT: SMALL-CAPS*/
+
+    /*
+    
+    O comando font-variant: small-caps transforma todas as letras em maiúsculas, mas as primeiras letras ficam maiores que as outras, gerando o efeito do exercício.
+    
+    */
+    
+    font-variant: small-caps;
+
+
+    /*TRANSFORM: UPPERCASE*/
+    
+    /*
+    
+    O comando transform:uppercase transforma todas as letras em maiúsculas
+    
+    */
+}
+
+header > p {
+    padding-bottom: 50px;
+}
+
+header > p > a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+
+header > p > a:hover {
+    text-decoration: underline;
+    color:rgb(20, 100, 220);
+}
+
+/*--------------------------CONTEÚDO------------------------*/
+
+section {
+    padding-top: 15%;
+    padding-bottom:10%;
+    line-height: 2em;
+    padding-left: 30px;
+    font-size: 3vw;
+}
+
+section > p {
+    padding-bottom: 2em;
+    
+}
+
+section.normal {
+    background-color: white;
+    color:black;
+    
+}
+
+section.imagem {
+    background-color: rgb(53, 51, 51);
+    color:white;
+    background-size: cover;
+    
+    /*BOX-SHADOW: INSET*/
+
+    /*
+    
+    Para que possamos realizar o efeito parallax (bastante utilizado em jogos 2D), inicialmente, criamos uma sombra nas imagens incluídas no desenvolvimento (no caso, as folhas de cartas e a foto da joaninha na flor). Para o caso abaixo, utilizamos as coordenadas 6px 6px 13px 0px e uma cor mais para o cinza para ficar mais suave.
+    
+    */
+    
+    box-shadow:inset 6px 6px 13px 0px rgb(48, 47, 47);
+
+    /*BACKGROUND-ATTACHMENT: FIXED*/
+
+    /*
+    
+    Após criar as sombras nas imagens, incluímos o comando bakground-attachment: fixed para que as imagens fiquem fixadas atrás dos textos e quadros anteriormente criados.
+    
+    */
+
+    background-attachment: fixed;
+    
+}
+
+section.imagem > p {
+    background-color: rgba(22, 22, 22, 0.623);
+    text-shadow: 3px 3px 3px rgb(31, 30, 30);
+    
+   /*DISPLAY: INLINE-BLOCK*/
+   
+   /*
+   
+   Utilizamos o comando display: inline-block para ajustar a caixa criada pelo background-color ao texto, sem precisar criar medidas para isso (acaba ajustando automaticamente).
+   Além de colocarmos um padding de 5px para que o testo não fique colado nas bordas da caixa.
+   
+   */
+    
+    
+    display: inline-block;
+    padding: 5px;
+}
+
+section#img01 {
+    background-image: url('imagens/background001.jpg');
+    background-position: right center;
+    
+   
+}
+
+section#img02 {
+    background-image: url('imagens/background002.jpg');
+    background-position: right center;
+    
+}
+
+/*---------------------RODAPÉ----------------------------*/
+
+footer {
+    background-color: black;
+    text-align: center;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    padding: 15px;
+}
+
+footer > a {
+    text-decoration: none;
+    color:white;
+    font-weight: bolder;
+    
+}
+
+footer > a:hover {
+    text-decoration: underline;
+    color:crimson;
+}
